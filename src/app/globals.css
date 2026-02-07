@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 51, 51, 51;
+    --background-start-rgb: 255, 240, 245;
+    --background-end-rgb: 240, 230, 255;
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+          135deg,
+          rgb(var(--background-start-rgb)),
+          rgb(var(--background-end-rgb))
+        );
+    min-height: 100vh;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+@layer utilities {
+    .cute-shadow {
+          box-shadow: 0 4px 15px rgba(236, 72, 153, 0.15);
+    }
+    .cute-card {
+          @apply bg-white/80 backdrop-blur-sm rounded-3xl cute-shadow p-6;
+    }
+}
